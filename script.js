@@ -28,3 +28,11 @@ btnCloseModal.addEventListener(`click`, closeModal);
 
 //EVENTLISTENER FOR CLICKING BACKGROUND//
 overlay.addEventListener(`click`, closeModal);
+
+//EVENTLISTENER FOR PRESSING ESCAPE KEY//
+document.addEventListener(`keydown`, function (e) {
+  if (e.key === `Escape` && !modal.classList.contains(`hidden`)) {
+    console.log(`HAKUZ`);
+    closeModal();
+  }
+});
